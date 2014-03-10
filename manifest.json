@@ -1,0 +1,29 @@
+{
+  "name": "Meatspace Enteprise Edition",
+  "version": "2014.3.10.1",
+  "manifest_version": 2,
+  "description": "Alerts when your namebro is mentioned",
+    "homepage_url": "http://github.com/mikemaccana",
+    "permissions": [
+      "tabs",
+      "https://chat.meatspac.es/",
+      "http://chat.meatspac.es/"
+    ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://tickets.jsconf.us/",
+        "https://tickets.jsconf.us/",
+        "https://chat.meatspac.es/",
+        "http://chat.meatspac.es/"
+      ],
+      "js": ["js/mutation-summary.js", "js/jquery.js", "js/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+    "icons": {
+    "16": "images/icons/icon16.png",
+    "48": "images/icons/icon48.png",
+    "128": "images/icons/icon128.png"
+  }
+}
